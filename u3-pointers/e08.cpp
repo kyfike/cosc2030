@@ -55,12 +55,9 @@ G.    cout << longPtr << endl; //The addresses displayed aren't the same because
 **************/
 
 /* 8.10
-A.  
+A.  void zero(long bigIntegers, int arraySize)  //header
+B.  void zero(long, int);                       //prototype
 
-B.  
-
-C.  
-
-D.  
-
+C.  int and1AndSum(int oneTooSmall[], int arraySize)    //header
+D.  int and1AndSum(int [], int);                        //prototype
 **************/

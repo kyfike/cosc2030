@@ -15,12 +15,20 @@ C.  for (int i = 0; i < size; i++){
     }
 
 D.  vPtr = &values[0];
+    or
+    vPtr = (values);
 
-E.  
+E.  for (int i = 0; i < size; i++){
+        cout << *(vPtr + i) << endl;
+    }
 
-F.  
+F.  for (int i = 0; i < size; i++){
+        cout << *(values + i)<< endl;
+    }
 
-G.  
+G.  for (int i = 0; i < size; i++){
+        cout << vPtr[i] << endl;
+    }
 
 H.  
 

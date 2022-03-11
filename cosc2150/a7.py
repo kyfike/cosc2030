@@ -18,7 +18,7 @@ intsix = 6
 print(intsix)
 print(hex(id(intsix)))
 
-print("float")
+print("\nfloat")
 intone = float(1)
 print(intone)
 print(hex(id(intone)))
@@ -38,7 +38,7 @@ intsix = float(6)
 print(intsix)
 print(hex(id(intsix)))
 
-print("strings")
+print("\nstrings")
 intone = "1"
 print(intone)
 print(hex(id(intone)))
@@ -58,7 +58,7 @@ intsix = "6"
 print(intsix)
 print(hex(id(intsix)))
 
-print("mixed: int-float-st-st-float-int")
+print("\nmixed: int-float-st-st-float-int")
 intone = 1
 print(intone)
 print(hex(id(intone)))

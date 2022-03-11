@@ -30,28 +30,28 @@ G.  for (int i = 0; i < size; i++){
         cout << vPtr[i] << endl;
     }
 
-H.  
+H.  values[4];      a.s. notation w/ array name
+    *(values + 4);  p/o notation w/ array name
+    vPtr[4];        a.s. notation
+    *(vPtr + 4);    p/o notation
 
-I.  
+I.  1002500 + (4 bytes * 3rd-in-array) = memory location
+    starting + (space per uns int *  off-set from start)
+    = 1002512
+    The value at that location is 8.
 
-J.  
+J.  The address referenced by vPtr -= 4 would be:   1002500.
+    The value at that location:                     2.
 **************/
 
 /* 8.9
-A.  
-
-B.  
-
-C.  
-
-D.  
-
-E.  
-
-F.  
-
-G.  
-
+A.    long* longPtr;
+B.    longPtr = &value1;
+C.    cout << *(longPtr) << endl;
+D.    longPtr = &value2;
+E.    cout << *(longPtr) << endl;
+F.    cout << &value1 << endl;
+G.    cout << longPtr << endl; //The addresses displayed aren't the same because value1 and value2 aren't stored at the same address.
 **************/
 
 /* 8.10

@@ -8,8 +8,8 @@
  * *****/
 #include <iostream> //cout; cin;
 #include <string> //to_string function
-#ifndef COMPLEX_H
-#define COMPLEX_H
+#ifndef RATIONAL_H
+#define RATIONAL_H
 
 class Complex {
 public:

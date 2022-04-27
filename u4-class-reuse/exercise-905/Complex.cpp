@@ -44,7 +44,7 @@ return Subtract;
 Complex Complex::multiply(Complex b){
     Complex Mult;
     Mult.real = real*b.real - imag*b.imag;
-    Mult.imag = real*b.imag - b.real*imag;
+    Mult.imag = real*b.imag + b.real*imag;
 return Mult;
 }
 

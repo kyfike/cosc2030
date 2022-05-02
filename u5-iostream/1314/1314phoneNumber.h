@@ -8,6 +8,8 @@ using namespace std;
 class PhoneNumber {
     friend ostream& operator << (ostream&, const PhoneNumber&);
     friend istream& operator >> (istream&, PhoneNumber&);
+public: 
+    PhoneNumber(char* [], PhoneNumber&);
 private:
     string areaCode;
     string exchange;

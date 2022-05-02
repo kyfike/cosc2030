@@ -4,6 +4,7 @@
 */
 
 #include <iomanip>
+#include <string>
 #include "1314phoneNumber.h"
 using namespace std;
 
@@ -15,6 +16,7 @@ ostream& operator << (ostream& output, const PhoneNumber& number){
     return output; // enables cou << a << b << c;
 }
 
+
 istream& operator >> (istream& input, PhoneNumber& number){
     input.ignore(); // skip (
     input >> setw(3) >> number.areaCode;
@@ -23,4 +25,24 @@ istream& operator >> (istream& input, PhoneNumber& number){
     input.ignore(); // skip dash
     input >>setw(4) >> number.line;
     return input; // enables cin >> a >> b >> c;
+}
+
+
+
+PhoneNumber::PhoneNumber(char* array[], PhoneNumber& number){
+    char area[3], ex[3], line[4];
+    for (int i = 0; i < 14; i++){ // areacode
+        if (i < 4 && i > 0) {
+            area[i] = *array[i];
+        }
+        if (i < 9 && i > 5) { // exchange
+            ex[i] = *array[i];
+        }
+        if (i < 15 && i > 9) { // line
+            line[i] = *array[i];
+        }
+    }
+    number.areaCode = area;
+    number.exchange = ex;
+    number.line = line;
 }

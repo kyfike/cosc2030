@@ -27,8 +27,9 @@ istream& operator >> (istream& input, PhoneNumber& number){
     return input; // enables cin >> a >> b >> c;
 }
 
-
-
+/*
+My attempt at copying the char phoneNumber array into a PhoneNumber object.
+*/
 PhoneNumber::PhoneNumber(char* array[], PhoneNumber& number){
     char area[3], ex[3], line[4];
     for (int i = 0; i < 14; i++){ // areacode

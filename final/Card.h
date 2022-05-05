@@ -8,13 +8,14 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
+#include <type_traits>
 
 class Card {
     public:
         enum FaceValue {
-            Ace,  Deuce, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King };
+            Ace = 0,  Deuce, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King };
         enum Suit {
-            Hearts, Diamonds, Spades, Clubs };
+            Hearts = 0, Diamonds, Spades, Clubs };
 
         Card(FaceValue f, Suit s) {
             this->cardSuit = s;
@@ -37,24 +38,20 @@ class Card {
         FaceValue getFaceValue() {
             return cardFace;
         }
-/*
-        friend std::ostream& operator << (std::ostream& output, const Card& obj) {
-            output << obj.FaceValue << " of " << obj.Suit << endl;
-            return output;
-        }*/
 
         const std::string toString() const {
             std::ostringstream buffer;
             buffer << std::fixed
-            << cardFace << cardSuit;
+            << faces[cardFace] << " of "
+            << suits[cardSuit] << std::endl;
             return buffer.str();
         }
 
     private:
         Suit cardSuit;
         FaceValue cardFace;
-        //static string faces[];
-        //static string suits[];
+        std::string faces[13] = { "Ace",  "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+        std::string suits[4] = { "Hearts", "Diamonds", "Spades", "Clubs" };
 };
 
 #endif

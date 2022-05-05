@@ -13,14 +13,16 @@
 class Card {
     public:
         enum FaceValue {
-            Ace = 0,  Deuce, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King };
+            Ace,  Deuce, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King };
         enum Suit {
-            Hearts = 0, Diamonds, Spades, Clubs };
+            Hearts, Diamonds, Spades, Clubs };
 
         Card(FaceValue f, Suit s) {
             this->cardSuit = s;
             this->cardFace = f;
         }
+        
+        Card();
         ~Card();
 
         void setSuit(Suit s) {
@@ -42,7 +44,7 @@ class Card {
         const std::string toString() const {
             std::ostringstream buffer;
             buffer << std::fixed
-            << faces[cardFace] << " of "
+            << faceArr[cardFace] << " of "
             << suits[cardSuit] << std::endl;
             return buffer.str();
         }
@@ -50,7 +52,7 @@ class Card {
     private:
         Suit cardSuit;
         FaceValue cardFace;
-        std::string faces[13] = { "Ace",  "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
+        std::string faceArr[13] = { "Ace",  "Deuce", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
         std::string suits[4] = { "Hearts", "Diamonds", "Spades", "Clubs" };
 };
 

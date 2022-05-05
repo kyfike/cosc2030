@@ -18,12 +18,16 @@ class Card {
             Hearts, Diamonds, Spades, Clubs };
 
         Card(FaceValue f, Suit s) {
-            this->cardSuit = s;
-            this->cardFace = f;
+            setSuit(s);
+            setFaceValue(f);
         }
         
-        Card();
-        ~Card();
+        Card(){
+            // empty
+        };
+        ~Card() {
+            // empty
+        };
 
         void setSuit(Suit s) {
             this->cardSuit = s;

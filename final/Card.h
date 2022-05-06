@@ -47,7 +47,7 @@ class Card {
 
         const std::string toString() const {
             std::ostringstream buffer;
-            buffer << std::fixed
+            buffer << std::left << std::fixed << std::setw(6)
             << faceArr[cardFace] << " of "
             << suits[cardSuit] << std::endl;
             return buffer.str();
